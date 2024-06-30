@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eff0f1;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index:100
+
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 2000px;
+    justify-content: space-evenly;
+    margin: 130px 60px;
+    gap: 40px
+}
+
+.description-mobile-view {
+    display: none;
+
+}
+
+.section-car {
+    height: 510px;
+    width: 50%;
+}
+
+.car-img {
+    height: 100%;
+    max-height: 35vw;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 3.6rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.car-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .24s;
+}
+
+.car-img img:hover {
+    transform: scale(1.1);
+}
+
+.car-definition {
+    width: 40%;
+}
+
+.description-web-view {
+    display: block;
+}
+
+.titulo {
+    color: #cc0033;
+}
+
+.subtitulo {
+    color: #313639;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom:  1.6rem;
+}
+
+.description {
+    color: #383c3e;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 4.4rem;
+}
+
+.colors {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+}
+
+.colors h3 {
+    margin-bottom:  1.2rem;
+    font-size: 1.6rem;
+}
+
+.colors-strips {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.colors-strips li {
+    list-style: none;
+}
+
+.colors-strips li span {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: transform .24s;
+}
+
+.colors-strips li span:hover{
+    transform: scale(1.1);
+}
+
+.wheels {
+    display: flex;
+    flex-direction: column;
+}
+
+.wheels h3 {
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+}
+
+.wheels-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.wheels-collection li {
+    max-width: 9.5rem;
+    list-style: none;
+}
+
+.wheels-collection li span {
+    background-image: url('./images/rodas.jpeg');
+    padding-top: 100%;
+    width: 96px;
+    height: 50px;
+    display: block;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.wheels-collection li span:hover {
+    transform: scale(1.10);
+}
+
+.fale-conosco{
+    position: fixed;
+    bottom: 4.8rem;
+    right: 3.2rem;
+    transition: all .2s ease-in-out;
+
+}
+
+.fale-conosco img{
+    width: 6.4rem;
+    height: 6.4rem;
+}
+
+.fale-conosco:hover {
+    transform: scale(1.1);
+}
+
+.selecionado {
+    transform: scale(1.0);
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .description-mobile-view{
+        display: block;
+
+    }
+
+    .description-web-view{
+        display: none;
+    }
+
+    .section-car{
+        width: 100%;
+        height: 70vw;
+    }
+    
+    .car-img {
+        max-height: 70vw;
+    }
+
+    .car-definition{
+        width: 100%;
+        padding: 1.6rem;
+    }
+
+    .description{
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .content {
+        margin: 110px 10px;
+    }
+
+    .colors-strips li span {
+        width: 40px;
+        height: 40px;
+    }
+
+    .wheels-collection li span {
+        width: 69px;
+        background-size: 100%;
+    }
+
+    .fale-conosco {
+        bottom: 1rem;
+        right: 1.5rem;
+    }
+}
